@@ -76,6 +76,12 @@ header {
 
       a {
         margin-right: 25px;
+        transition: 0.3s ease all;
+        font-weight: 300;
+
+        &:hover{
+          font-weight: 700;
+        }
       }
     }
 
@@ -89,8 +95,15 @@ header {
           margin-left: 25px;
           color: $red;
           border: 1px solid $red;
+          background-color: #fff;
           padding: 15px 60px;
           border-radius: 2rem;
+          transition: 0.3s ease all;
+
+          &:hover{
+            color:white;
+            background-color: $red;
+          }
         }
       }
     }

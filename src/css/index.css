@@ -151,6 +151,12 @@ header .container {
 }
 header .container .header__links a {
   margin-right: 25px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  font-weight: 300;
+}
+header .container .header__links a:hover {
+  font-weight: 700;
 }
 header .container .header__btn a {
   font-weight: 700;
@@ -160,8 +166,15 @@ header .container .header__btn a:last-child {
   margin-left: 25px;
   color: #F53838;
   border: 1px solid #F53838;
+  background-color: #fff;
   padding: 15px 60px;
   border-radius: 2rem;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+header .container .header__btn a:last-child:hover {
+  color: white;
+  background-color: #F53838;
 }
 
 .first__screen .container {
