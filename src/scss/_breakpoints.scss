@@ -72,10 +72,15 @@
     div {
       padding: 0;
       padding-top: 25px;
+      width: auto;
 
       h2,
       p {
         text-align: center;
+      }
+
+      h2{
+        padding-bottom: 10px;
       }
     }
 
@@ -141,6 +146,11 @@
 
   .plans .container .title{
     padding-top: 50px;
+  }
+
+
+  .subscribe .container div h2{
+    font-size: 28px;
   }
 }
 
