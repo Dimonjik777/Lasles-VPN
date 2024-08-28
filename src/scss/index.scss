@@ -86,25 +86,31 @@ header {
     }
 
     .header__btn {
+      @include flex;
 
       a {
         font-weight: 700;
         color: $primary;
+      }
+      .signUp {
+        margin-left: 25px;
+        color: $red;
+        border: 1px solid $red;
+        background-color: #fff;
+        padding: 15px 60px;
+        border-radius: 2rem;
+        transition: 0.3s ease all;
 
-        &:last-child {
-          margin-left: 25px;
-          color: $red;
-          border: 1px solid $red;
-          background-color: #fff;
-          padding: 15px 60px;
-          border-radius: 2rem;
-          transition: 0.3s ease all;
-
-          &:hover{
-            color:white;
-            background-color: $red;
-          }
+        &:hover{
+          color:white;
+          background-color: $red;
         }
+      }
+      .burger{
+        width: 50px;
+        display: none;
+        margin-left: 25px;
+        cursor: pointer;
       }
     }
   }
@@ -139,6 +145,7 @@ header {
     .info_item {
       @include flex;
       padding: 35px 0;
+      margin: 0 15px;
 
       img {
         margin-right: 25px;
@@ -162,6 +169,7 @@ header {
         border-left: 1px solid #EEEFF2;
         padding-left: 100px;
         padding-right: 100px;
+        margin: 0;
       }
     }
   }
@@ -213,12 +221,15 @@ header {
 
     .plans__content {
       @include flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
       .plan {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin: 25px;
 
 
         width: 330px;
@@ -304,11 +315,24 @@ header {
   }
 }
 
+.network{
+
+  .container{
+
+    img{width: 100%;}
+  }
+}
+
 .campaigns {
 
   .container {
 
     @include flex;
+    flex-wrap: wrap;
+
+    img{
+      margin: 0 10px;
+    }
   }
 }
 
@@ -473,6 +497,7 @@ footer {
     padding-bottom: 25px;
 
     @include flex;
+    flex-wrap: wrap;
     align-items: start;
 
     .logo{
@@ -482,6 +507,10 @@ footer {
 
     h3{margin-bottom: 10px;}
     a{margin-top: 10px;}
+
+    .footer__column, .footer__engage, .footer__product, .footer__money{
+      margin: 25px;
+    }
 
     .footer__column{
       width: 340px;
@@ -524,6 +553,13 @@ footer {
               background-color: $red;
             }
           }
+
+          &:first-child{
+
+            &:after{
+              left: -13px;
+            }
+          }
         }
         
       }
@@ -551,3 +587,5 @@ footer {
     }
   }
 }
+
+@import "_breakpoints.scss";
